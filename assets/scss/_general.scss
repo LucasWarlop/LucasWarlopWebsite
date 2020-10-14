@@ -1,0 +1,77 @@
+*, ::before, ::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+    font-family: $font-family-primary;
+}
+
+h1 {
+    font-family: $font-family-secondary;
+    @extend %font-normal;
+    font-size: 7em;
+    color: black;
+}
+h2 {
+    @extend %font-normal;
+	font-size: 3em ;
+	letter-spacing: .3em;
+	color: white;
+}
+
+header {
+    @include dimension(100%,75vh);
+    background: #0071bc;
+    nav {
+        @include dimension(100%,70px);
+	    z-index: 1000;
+        position: fixed;
+        ul {
+            @include dimension(auto,100%);
+	        @extend %list-horizontal;
+            li {
+                font-size: 1em;
+	            margin: 0px 20px;
+	            cursor: pointer;
+	            color: white;
+            }
+        }
+    }
+    .header-background {
+        @include dimension(100%);
+	    position: absolute;
+	    left: 0;
+	    bottom: 5%;
+	    display: block;
+    }
+    .header-content {
+        position: relative;
+	    z-index: 1000;
+	    text-align: center;
+	    top: 25vh;
+    }
+}
+
+main {
+    height: 200vh;
+
+}
+
+footer {
+    @include dimension(100%);
+    .footer-background {
+        @include dimension(100%);
+        position: relative;
+	    left: 0;
+	    display: block;
+	    z-index: 1000;
+	    bottom: -100px;
+    }
+    .footer-content {
+        position: relative;
+	    z-index: 1000;
+	    text-align: center;
+	    background: #0071bc;
+    }
+}
