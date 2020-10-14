@@ -6,6 +6,9 @@
 body {
     font-family: $font-family-primary;
 }
+.container {
+    margin:0 250px;
+}
 
 h1 {
     font-family: $font-family-secondary;
@@ -56,13 +59,15 @@ header {
         position: relative;
 	    z-index: 1000;
 	    text-align: center;
-        top: 25vh;
+        top: 23vh;
     }
 }
 
 main {
-    height: 200vh;
-
+    padding-top: 20vh;
+    .main-profil-content {
+        display: flex;
+    }
 }
 
 footer {

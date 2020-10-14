@@ -28,6 +28,10 @@ body {
   font-family: all-round-gothic, sans-serif;
 }
 
+.container {
+  margin: 0 250px;
+}
+
 h1 {
   font-family: mascot-mvb, sans-serif;
   font-size: 7em;
@@ -86,11 +90,15 @@ header .header-content {
   position: relative;
   z-index: 1000;
   text-align: center;
-  top: 25vh;
+  top: 23vh;
 }
 
 main {
-  height: 200vh;
+  padding-top: 20vh;
+}
+
+main .main-profil-content {
+  display: flex;
 }
 
 footer {
