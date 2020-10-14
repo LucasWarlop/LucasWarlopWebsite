@@ -10,3 +10,13 @@
 	justify-content: center;
     align-items: center;
 }
+
+%link {
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: black;
+    }
+}

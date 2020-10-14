@@ -4,7 +4,7 @@ h1, h2 {
   line-height: 1;
 }
 
-header nav ul {
+header nav ul, footer .footer-content ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -90,7 +90,19 @@ footer .footer-background {
   left: 0;
   display: block;
   z-index: 1000;
-  bottom: -100px;
+  bottom: -300px;
+}
+
+@media screen and (max-width: 1100px) {
+  footer .footer-background {
+    bottom: -200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer .footer-background {
+    bottom: -100px;
+  }
 }
 
 footer .footer-content {
@@ -98,4 +110,43 @@ footer .footer-content {
   z-index: 1000;
   text-align: center;
   background: #0071bc;
+}
+
+footer .footer-content .footer-content-social {
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+footer .footer-content .footer-content-contact {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+footer .footer-content ul {
+  padding: 20px 0px;
+}
+
+footer .footer-content ul li {
+  font-size: 1em;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+footer .footer-content ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footer-content ul li a:hover {
+  color: black;
+}
+
+footer .footer-content ul li a:visited {
+  color: none;
+}
+
+footer .footer-content .footer-content-copyright {
+  font-size: 2em;
+  color: white;
+  padding: 20px 0;
 }
