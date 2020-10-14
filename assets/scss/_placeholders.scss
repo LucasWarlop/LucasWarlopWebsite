@@ -1,0 +1,12 @@
+%font-normal {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+%list-horizontal {
+    list-style-type: none;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
