@@ -9,6 +9,7 @@ header nav ul, footer .footer-content ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 *, ::before, ::after {
@@ -112,16 +113,6 @@ footer .footer-content {
   background: #0071bc;
 }
 
-footer .footer-content .footer-content-social {
-  font-size: 3em;
-  margin: 20px 0;
-}
-
-footer .footer-content .footer-content-contact {
-  font-size: 2em;
-  margin: 20px 0;
-}
-
 footer .footer-content ul {
   padding: 20px 0px;
 }
@@ -145,8 +136,21 @@ footer .footer-content ul li a:visited {
   color: none;
 }
 
+footer .footer-content .footer-content-social {
+  font-size: 3em;
+  margin: 30px 0;
+  padding: 0;
+}
+
+footer .footer-content .footer-content-contact {
+  font-size: 2em;
+  margin: 30px 0;
+  padding: 0;
+}
+
 footer .footer-content .footer-content-copyright {
   font-size: 2em;
   color: white;
+  margin: 0;
   padding: 20px 0;
 }

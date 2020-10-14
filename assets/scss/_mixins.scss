@@ -15,3 +15,8 @@
         color: $visited-color;
     }
 }
+
+@mixin space ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
