@@ -9,4 +9,15 @@
 	display: flex;
 	justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+%link {
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: black;
+    }
 }

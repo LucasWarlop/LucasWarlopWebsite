@@ -66,12 +66,43 @@ footer {
 	    left: 0;
 	    display: block;
 	    z-index: 1000;
-	    bottom: -100px;
+        bottom: -300px;
+        @media screen and (max-width: 1100px){
+            bottom: -200px;
+        }
+        @media screen and (max-width: 700px){
+            bottom: -100px;
+        }
     }
     .footer-content {
         position: relative;
 	    z-index: 1000;
 	    text-align: center;
-	    background: #0071bc;
+        background: #0071bc;
+        ul {
+            @extend %list-horizontal;
+            padding: 20px 0px;
+            li {
+                font-size: 1em;
+	            margin: 0px 20px;
+	            cursor: pointer;
+                @include link(white, black);
+            }
+        }
+        .footer-content-social {
+            font-size: 3em;
+            @include space(30px 0, 0);
+        }
+        .footer-content-contact {
+            font-size: 2em;
+            @include space(30px 0, 0);
+        }
+        
+        .footer-content-copyright {
+            font-size: 2em;
+            color: white;
+            @include space(0, 20px 0);
+        }
+        
     }
 }
