@@ -81,7 +81,7 @@ header {
                 }
                 font-size: 1em;
 	            cursor: pointer;
-	            color: white;
+                @include link(white, black);
             }
         }
     }
