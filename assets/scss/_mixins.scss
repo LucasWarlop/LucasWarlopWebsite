@@ -1,0 +1,22 @@
+@mixin dimension ($w: auto, $h: auto) {
+    width: $w;
+    height: $h;
+}
+
+@mixin link ($light-colors, $dark-color, $visited-color: none){
+    a {
+        text-decoration: none;
+        color: $light-colors;
+    }
+    a:hover {
+        color: $dark-color;
+    }
+    a:visited{
+        color: $visited-color;
+    }
+}
+
+@mixin space ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
