@@ -101,6 +101,9 @@ header {
 }
 
 main {
+    article {
+        padding-top: 10vh;
+    }
     padding-top: 20vh;
     h3 {
         padding-bottom: 25px;
@@ -241,7 +244,7 @@ main {
             border-radius: 10px;
             overflow: hidden;
             margin: 25px;
-            width: 25%;
+            width: 40%;
             @media screen and (max-width: 1400px){
                 width: 30%;
             }
@@ -255,6 +258,7 @@ main {
                 width: 100%;
             }
             .card-img {
+                padding: 10px;
                 img {
                     width: 100%;
                 }
@@ -262,6 +266,7 @@ main {
                 color: #0071bc;
             }
             .card-content{
+                padding: 15px;
                 h4 {
                     font-size: 1.5em;
                 }

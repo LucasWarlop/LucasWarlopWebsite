@@ -175,6 +175,10 @@ main {
   padding-top: 20vh;
 }
 
+main article {
+  padding-top: 10vh;
+}
+
 main h3 {
   padding-bottom: 25px;
 }
@@ -334,7 +338,7 @@ main .main-projets-content .card {
   border-radius: 10px;
   overflow: hidden;
   margin: 25px;
-  width: 25%;
+  width: 40%;
 }
 
 @media screen and (max-width: 1400px) {
@@ -362,12 +366,17 @@ main .main-projets-content .card {
 }
 
 main .main-projets-content .card .card-img {
+  padding: 10px;
   font-size: 2em;
   color: #0071bc;
 }
 
 main .main-projets-content .card .card-img img {
   width: 100%;
+}
+
+main .main-projets-content .card .card-content {
+  padding: 15px;
 }
 
 main .main-projets-content .card .card-content h4 {
