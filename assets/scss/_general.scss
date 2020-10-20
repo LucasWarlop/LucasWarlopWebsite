@@ -3,45 +3,85 @@
 	margin: 0;
 	padding: 0;
 }
+svg { fill: currentcolor; }
 body {
+    
     font-family: $font-family-primary;
+}
+.container {
+    margin:0 150px;
+    @media screen and (max-width: 1100px){
+        margin:0 100px;
+    }
+    @media screen and (max-width: 700px){
+        margin:0 50px;
+    }
 }
 
 h1 {
     font-family: $font-family-secondary;
     @extend %font-normal;
     font-size: 7em;
+    @media screen and (max-width: 700px){
+        font-size: 5em;
+    }
     color: black;
 }
 h2 {
     @extend %font-normal;
-	font-size: 3em ;
+    font-size: 3em ;
+    @media screen and (max-width: 700px){
+        font-size: 1.5em;
+    }
 	letter-spacing: .3em;
     color: white;
     padding-top: 20px;
 }
 h3 {
     @extend %font-bold;
-	font-size: 3em ;
+    font-size: 3em ;
+    @media screen and (max-width: 700px){
+        font-size: 2em;
+    }
+    @media screen and (max-width: 400px){
+        font-size: 1.5em;
+    }
 	letter-spacing: .4em;
     color: black;
     padding-top: 40px;
+    text-transform: uppercase;
+}
+h4 {
+    @extend %font-bold;
+    font-size: 2.5em ;
+    @media screen and (max-width: 700px){
+        font-size: 2em;
+    }
+    @media screen and (max-width: 400px){
+        font-size: 1em;
+    }
+    color: black;
 }
 header {
     @include dimension(100%,75vh);
     background: #0071bc;
     nav {
+        background-color: #0071bc;
         @include dimension(100%,70px);
-	    z-index: 1000;
+	    z-index: 2000;
         position: fixed;
         ul {
+            text-align: center;
             @include dimension(auto,100%);
 	        @extend %list-horizontal;
             li {
+                width: 15%;
+                @media screen and (max-width: 1000px){
+                    width:20%;
+                }
                 font-size: 1em;
-	            margin: 0px 20px;
 	            cursor: pointer;
-	            color: white;
+                @include link(white, black);
             }
         }
     }
@@ -56,12 +96,204 @@ header {
         position: relative;
 	    z-index: 1000;
 	    text-align: center;
-        top: 25vh;
+        top: 23vh;
     }
 }
 
 main {
-    height: 200vh;
+    article {
+        padding-top: 10vh;
+    }
+    padding-top: 20vh;
+    h3 {
+        padding-bottom: 25px;
+    }
+    .main-services-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .card {
+            padding: 25px;
+            width: 25%;
+            @media screen and (max-width: 1400px){
+                width: 30%;
+            }
+            @media screen and (max-width: 1200px){
+                width: 45%;
+            }
+            @media screen and (max-width: 900px){
+                width: 100%;
+            }
+            @media screen and (max-width: 600px){
+                width: 100%;
+            }
+            .card-img {
+                font-size: 2em;
+                color: #0071bc;
+            }
+            .card-content{
+                h4 {
+                    font-size: 1.5em;
+                }
+                p {
+                    font-size: 1em;
+                }
+            }
+            
+        }
+        .card:hover {
+            background-color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            .card-img {
+                font-size: 2em;
+                color: #0071bc;
+            }
+            .card-content{
+                h4 {
+                    font-size: 1.5em;
+                    color: white;
+                }
+                p {
+                    font-size: 1em;
+                    color: white;
+                }
+            }
+        }
+    }
+    .main-competences-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        div:nth-of-type(1) {
+            width: 60%;
+        }
+        div:nth-of-type(2) {
+            width: 40%;
+        }
+        div:nth-of-type(3) {
+            width: 100%;
+        }
+        @media screen and (max-width: 600px){
+            div:nth-of-type(1) {
+                width: 100%;
+            }
+            div:nth-of-type(2) {
+                width: 100%;
+            }
+            div:nth-of-type(3) {
+                width: 100%;
+            }
+        }
+        h4 {
+            font-size: 1.5em;
+        }
+        #progress ul {
+            
+            li {
+                text-align: left;
+                margin: 25px 25px 25px 0;
+                list-style-type: none;
+                align-items: center;
+                font-size: 1.2em;
+                background-color: #0071bc;
+                border-radius: 5px;
+                color: white;
+                img {
+                    width: 1.2em;
+                    vertical-align: bottom;
+                    color: #0071bc;
+                    margin-right: 10px;
+                }
+            }
+            li:hover {
+                //background-color: black;
+                //border-radius: 10px;
+                //cursor: pointer;
+                //color: white;
+            }
+        }
+        #outils ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            li {
+                text-align: center;
+                margin: 25px 25px 25px 0;
+                list-style-type: none;
+                align-items: center;
+                font-size: 1.2em;
+                
+                img {
+                    width: 1.2em;
+                    vertical-align: bottom;
+                    color: #0071bc;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .main-projets-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .card {
+            border: solid 5px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 25px;
+            width: 40%;
+            @media screen and (max-width: 1400px){
+                width: 30%;
+            }
+            @media screen and (max-width: 1200px){
+                width: 45%;
+            }
+            @media screen and (max-width: 900px){
+                width: 100%;
+            }
+            @media screen and (max-width: 600px){
+                width: 100%;
+            }
+            .card-img {
+                padding: 10px;
+                img {
+                    width: 100%;
+                }
+                font-size: 2em;
+                color: #0071bc;
+            }
+            .card-content{
+                padding: 15px;
+                h4 {
+                    font-size: 1.5em;
+                }
+                p {
+                    font-size: 1em;
+                }
+            }
+            
+        }
+        .card:hover {
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            .card-img {
+                img {
+                    transform: scale(1.25);
+                    transition: all 1.5s;
+                }
+                overflow: hidden;
+                font-size: 2em;
+                color: #0071bc;
+            }
+            .card-content{
+                
+            }
+        }
+    }
 
 }
 
